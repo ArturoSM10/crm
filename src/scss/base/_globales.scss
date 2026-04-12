@@ -1,0 +1,35 @@
+@use "sass:color";
+@use './variables' as v;
+@use '../components/mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuentePrincipal;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    background-color: v.$blanco;
+    padding-bottom: 1rem;
+}
+
+[class*="__titulo"] {
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+[class*="__contenedor"] {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}

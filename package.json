@@ -1,0 +1,38 @@
+{
+  "name": "crm",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ArturoSM10/crm.git#readme",
+  "bugs": {
+    "url": "https://github.com/ArturoSM10/crm.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArturoSM10/crm.git"
+  },
+  "license": "ISC",
+  "author": "Arturo Mendoza",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^7.1.1",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-imagemin": "^7.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5"
+  },
+  "browsersList": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
