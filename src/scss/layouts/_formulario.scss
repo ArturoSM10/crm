@@ -1,0 +1,57 @@
+@use '../base/variables' as v;
+@use '../components/mixins' as m;
+
+.form {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: v.$blanco;
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    .campo {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #4a5568;
+    }
+    input {
+        padding:   1rem;
+        border: 1px solid v.$border;
+        border-radius: 0.5rem;
+        &::placeholder {
+            color: #a0aebf;
+        }
+    }
+    .btn-submit {
+        @include m.boton(v.$secundario, v.$blanco, uppercase);
+        border-radius: 0;
+        font-size: 1.6rem;
+        padding: 1rem 0;
+        margin-top: 3rem;
+    }
+}
+
+.alerta {
+    max-width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    &.correcto {
+        background-color: v.$correcto;
+        color: v.$correctoFont;
+        border: 1px solid v.$correctoFont;
+    }
+
+    &.incorrecto {
+        background-color: v.$incorrecto;
+        color: v.$incorrectoFont;
+        border: 1px solid v.$incorrectoFont;
+    }
+}

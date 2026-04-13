@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+<body class="contenedor">
+    <aside class="aside">
+        <h1 class="aside__title">Crm - indexedDB</h1>
+        <p class="aside__p">Administra tus clientes con el CRM - IndexedDB</p>
+
+        <nav class="nav">
+            <ul>
+                <li><a class="nav__element" href="./index.html">Clientes</a></li>
+                <li class="nav--active"><a class="nav__element" href="./nuevo-cliente.html">Nuevo cliente</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main">
+        <h2 class="main__title">Nuevo cliente</h2>
+        <form class="form">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" placeholder="Nombre cliente">
+            </div>
+
+            <div class="campo">
+                <label for="correo">Email</label>
+                <input id="correo" type="email" placeholder="Email cliente">
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Telefono</label>
+                <input id="telefono" type="tel" placeholder="Telefono cliente">
+            </div>
+
+            <div class="campo">
+                <label for="empresa">Empresa</label>
+                <input id="empresa" type="text" placeholder="Empresa cliente">
+            </div>
+
+            <input class="btn-submit" type="submit" value="agregar cliente">
+        </form>
+        <p class="alerta incorrecto">Cliente agregado correctamente</p>
+    </main>
+</body>
+</html>
