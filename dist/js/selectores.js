@@ -1,0 +1,11 @@
+export const form = document.querySelector(`.form`);
+export const nombreInput = document.querySelector(`#nombre`);
+export const emailInput = document.querySelector(`#correo`);
+export const telefonoInput = document.querySelector(`#telefono`);
+export const empresaInput = document.querySelector(`#empresa`);
+export const main = document.querySelector(`.main`);
+export const table = document.querySelector(`.table`);
+export const tableBody = document.querySelector(`.tbody`);
+export const editarBtn = document.querySelector(`.btn-editar`);
+export const eliminarBtn = document.querySelector(`.btn-eliminar`);
+export const submitBtn = document.querySelector(`.btn-submit`);
