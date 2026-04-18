@@ -67,19 +67,18 @@ function validarFormulario(e) {
     }
 
     ui.crearAlerta(`Cliente agregado exitosamente`, `correcto`);
-    gestionarClientes(infoCampos);
+    agregarCliente(infoCampos);
     form.reset();
 }
 
-function gestionarClientes(obj) {
-    agregarCliente(obj);
-}
-
 function agregarCliente(objeto) {
-    // const id = Number(new URL(window.location.href).searchParams.get(`id`));
-    // objeto.id = id;
-    // console.log(objeto)
-    /*Me falta eso para editar y ver como limpiar html de forma mas optimizada o si sera por elementos preguntar a chat si si conviene dejarlo asi o modificar la logica de si esta en una pagina u otra*/
+    const id = Number(new URL(window.location.href).searchParams.get(`id`));
+    if (id) {
+        objeto.id = id;
+        editarCliente(objeto);
+        return;
+    }
+
     objeto.id = Date.now();
     const transaccion = db.transaction([`Clientes`], `readwrite`);
     const almacen = transaccion.objectStore(`Clientes`);
@@ -114,6 +113,15 @@ function eliminarCliente(id) {
     const almacen = transaccion.objectStore(`Clientes`);
     almacen.delete(id);
 
+}
+
+function editarCliente(objeto) {
+    const transaccion = db.transaction([`Clientes`], `readwrite`);
+    const almacen = transaccion.objectStore(`Clientes`);
+    almacen.put(objeto);
+    setTimeout(()=>{
+        window.location.href = `./index.html`;
+    },3000);
 }
 
 function leerBotones() {
